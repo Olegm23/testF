@@ -1,0 +1,17 @@
+@import "./seting";
+@import "./fonts";
+
+// First block
+@import "./_first/first";
+@import "./_first/_header/header";
+@import "./_first/_header/burger";
+@import "./_first/_first__group/first__group";
+@import "./_first/_first__group/registration";
+@import "./_first/modal";
+
+// Advantages block
+@import "./_advantages/advantages";
+@import "./_advantages/advantages__content";
+
+// Footer
+@import "./_footer/footer";

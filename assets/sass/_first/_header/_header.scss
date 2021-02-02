@@ -1,0 +1,79 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 37px;
+
+	.header__nav {
+		@include _480 {
+			display: none;
+
+			&.active {
+				display: block;
+				ul {
+					flex-direction: column;
+					align-items: flex-end;
+					justify-content: start;
+					left: 0;
+					position: absolute;
+					z-index: 999;
+					top: 80px;
+					background: $grad-header;
+					width: 100%;
+					height: 100%;
+					text-align: right;
+					li {
+						&:last-child {
+							a {
+								margin-right: 40px;
+								margin-bottom: 0;
+							}
+						}
+						a {
+							margin-bottom: 20px;
+							margin-right: 40px;
+						}
+					}
+				}
+			}
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+			li {
+				display: inline-block;
+				display: flex;
+				align-items: center;
+				&:last-child {
+					a {
+						margin-right: 0px;
+					}
+				}
+				a {
+					margin-right: 100px;
+					text-decoration: none;
+					font-style: normal;
+					font-weight: 325;
+					// font-weight: normal;
+					font-size: 18px;
+					line-height: 23px;
+					color: #ffffff;
+					&:hover {
+						color: $orange;
+					}
+					@include _480 {
+						margin-right: 20px;
+					}
+				}
+				svg {
+					margin-right: 12px;
+					&:hover {
+						cursor: pointer;
+						path {
+							fill: $orange !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

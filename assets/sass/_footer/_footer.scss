@@ -1,0 +1,44 @@
+.footer {
+	padding-bottom: 185px;
+	padding-left: 40px;
+	padding-right: 40px;
+	.container {
+		background: $grad-footer;
+		border-radius: 10px;
+		padding: 70px;
+		box-sizing: border-box;
+
+		@include _390 {
+			padding: 10px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		.img__background {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: right;
+			@include _880 {
+				display: none;
+			}
+			img {
+				width: 90%;
+				height: 90%;
+				@include _1230 {
+					width: 80%;
+					height: 80%;
+				}
+				@include _1140 {
+					width: 70%;
+					height: 70%;
+				}
+				@include _1050 {
+					width: 65%;
+					height: 65%;
+				}
+			}
+		}
+	}
+}

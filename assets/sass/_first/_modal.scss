@@ -1,0 +1,142 @@
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(28, 24, 47, 0.5);
+}
+
+.modal-content {
+	position: relative;
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 490px;
+	background: #ffffff;
+	box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
+	padding: 60px;
+	box-sizing: border-box;
+
+	@include _520 {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	@include _480 {
+		padding: 60px 20px 60px 20px;
+	}
+}
+
+.close {
+	color: #918d9a;
+	float: right;
+	font-size: 30px;
+	font-weight: 300;
+	position: absolute;
+	right: 24px;
+	top: 10px;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	text-align: center;
+	margin-bottom: 35px;
+	h2 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 52px;
+		margin: 0;
+		color: $dark;
+		@include _480 {
+			font-size: 30px;
+		}
+	}
+}
+
+.modal-body {
+	form {
+		display: flex;
+		flex-direction: column;
+		.form__field {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			label {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 24px;
+				color: $grey;
+				margin-bottom: 10px;
+			}
+
+			input {
+				border: 1px solid #dddae7;
+				border-radius: 4px;
+				padding: 17px 12px;
+				margin-bottom: 18px;
+				font-style: normal;
+				font-weight: 325;
+				font-size: 16px;
+				line-height: 100%;
+				color: $dark;
+				outline: none;
+				display: block;
+
+				&::placeholder {
+					color: #918d9a;
+				}
+
+				&:valid:not(:placeholder-shown) {
+					border-color: #7dc166;
+					+ .check {
+						display: block;
+					}
+				}
+				&:invalid:not(:placeholder-shown) {
+					border-color: red;
+				}
+			}
+			.check {
+				color: #7dc166;
+				position: absolute;
+				right: 20px;
+				top: 50px;
+				display: none;
+			}
+		}
+
+		.form__btn {
+			display: block;
+			text-align: center;
+			padding: 16px 0px;
+			background: $orange;
+			border-radius: 4px;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 100%;
+			color: #ffffff;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			margin-top: 18px;
+
+			&:hover {
+				background: #ac411a;
+			}
+		}
+	}
+}
